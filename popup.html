@@ -6,16 +6,39 @@
     <script src="popup.js"></script>
 </head>
 <body>
-<div>
+<main>
     <input type="color" id="color-theme"/>
-    <button id="btn">
-        Click
-    </button>
-</div>
+    <div>
+        <div class="recommended-colors">Most recommended colors:</div>
+        <div class="colors-wrapper" id="colors-wrapper"></div>
+    </div>
+</main>
 </body>
 <style>
-    button {
+    html {
+        background: #4a4444;
+        color: #fff;
+    }
+
+    body {
+        width: 300px;
+    }
+
+    .recommended-colors {
         margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .colors-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    .color-item {
+        border: 1px solid black;
+        width: 100%;
+        height: 30px;
     }
 </style>
 </html>
